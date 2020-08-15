@@ -1,0 +1,4 @@
+source/bin
+source/obj
+source/*.depend
+source/*.layout
