@@ -1,4 +1,5 @@
 source/bin
 source/obj
+source/*.cbp
 source/*.depend
 source/*.layout
