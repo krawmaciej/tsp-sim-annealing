@@ -195,24 +195,4 @@ bool getNewPath(Path& currentPath, float** matrix, float temperature)
     return true;
 }
 
-Path annealingFindPath(float** matrix, int matrixSize, float initialTemperature, float q)
-{
-    Path currentPath = initializeNewPath(matrix, matrixSize);
-
-    int withoutChangeCounter = 0;
-    // after how many temperature changes without changing path the algorithm will stop
-    int threshold = 10000;
-
-    for (float temperature = initialTemperature; (withoutChangeCounter < threshold)
-         && (temperature > 0.001f); temperature*= q)
-    {
-        if (getNewPath(currentPath, matrix, temperature))
-            withoutChangeCounter = 0;
-        else
-            ++withoutChangeCounter;
-    }
-
-    return currentPath;
-}
-
 #endif // ANNEALING_H_INCLUDED

@@ -85,7 +85,9 @@ int main()
 
     int withoutChangeCounter = 0;
     // after how many temperature changes without changing path the algorithm will stop
-    int threshold = 5000;
+    int changeThreshold = 1000;
+    // after reaching what temperature the algorithm stops
+    float temperatureThreshold = 0.1f;
     float temperature = initialTemperature;
     bool annealing = true;
 
@@ -129,8 +131,8 @@ int main()
         }
 
         // annealing
-        annealing = (withoutChangeCounter < threshold) &&
-                    (temperature > 0.001f);
+        annealing = (withoutChangeCounter < changeThreshold) &&
+                    (temperature > temperatureThreshold);
 
         if (annealing)
         {
@@ -187,9 +189,6 @@ int main()
         window.display();
     }
     // end of visualization
-
-
-
 
     if (annealing)
     {
