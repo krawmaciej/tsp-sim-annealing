@@ -8,10 +8,15 @@ Visualized using SFML version 2.5.1 for GCC 7.3.0 MinGW (DW2). Libraries for sta
 Points are cities, every city is connected to every other city, input is entered into the console window. After entering all data the visualization window opens, the window dimensions are 800x600.
 
 Visualization result:
+
 ![result](images/result.png)
+
 Visualization example:
+
 ![example](images/examplegif.gif)
+
 High temperature:
+
 ![hightemp](images/hightempgif.gif)
 
 ### How to:
@@ -30,9 +35,13 @@ High temperature:
 
 ### Sample inputs:
 Points x,y, coordinates: ``` 430,86,278,235,352,111,374,187,536,146,359,243,257,168,318,198,435,211, ```
+
 Temperature: ``` 100 ```
+
 q: ``` 0.999 ```
 
 Points x,y, coordinates: ``` 334,195,404,193,240,235,327,231,91,216,374,177,372,214,275,307,555,218,481,448,201,147,268,392,198,456,170,289,426,378,385,246,325,359, ```
+
 Temperature: ``` 5 ```
+
 q: ``` 0.9999 ```
